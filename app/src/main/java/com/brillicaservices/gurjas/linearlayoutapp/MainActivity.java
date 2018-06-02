@@ -12,6 +12,12 @@ import android.widget.Button;
  * Dated - 2, June, 2018*/
 
 public class MainActivity extends AppCompatActivity {
+    
+    /*
+     * Creating a Global variable of TextView.
+     * So that we can use it's reference in other functions as well.
+     * */
+    TextView obj;
 
     /*
     * Create a new Button object*/
@@ -29,10 +35,21 @@ public class MainActivity extends AppCompatActivity {
          * Use this function to tell the activity which view is to be loaded.
          * R - automatically generated file. This file will be generated only after successful gradle build*/
         setContentView(R.layout.activity_main);
+        
+        /*
+         * Casting TextView object with it's ID.
+         * R.id.hello_world has been declared in the activity_main.xml file.
+         * */
+        obj = (TextView) findViewById(R.id.hello_world);
 
         /*
         * assign button reference to the button object*/
         btn = (Button) findViewById(R.id.next_activity_button);
+        
+        /*
+         * Using predefined function .setText() to set text to the text view
+         * */
+        obj.setText("Gurjas");
 
         /*
         * Performing button @onClickListener()
